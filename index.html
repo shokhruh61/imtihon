@@ -384,7 +384,7 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="footer__info--icon container">
+   <div class="footer__info--icon container">
       <div class="footer__info--icon_nav">
         <ul>
           <li><a href="#">Privacy & Terms</a></li>
@@ -399,32 +399,38 @@
         <a href="#"><img src="./images/twitter.svg" width="17.5" height="17.5" alt="twitter"></a>
         <a href="#"><img src="./images/linkedin.svg" width="17.5" height="17.5" alt="linkedin"></a>
       </div>
-    </div>
-    <!-- LOADER -->
-<!-- 
+    </div>    
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
     <script>
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelectorAll('.header__nav a');
-      hamburger.addEventListener('click', () => {
-        navLinks.forEach(link => {
-          if (link.style.display === 'block') {
-            link.style.display = 'none';
-          } else {
-            link.style.display = 'block';
-          }
-        });
-      });
-      window.addEventListener('load', function () {
-        // Keep the loader for 5 seconds
-        setTimeout(() => {
-          // Hide the loader
-          document.getElementById('loader').style.display = 'none';
-          // Show the content
-          document.querySelector('.content').style.display = 'block';
-        }, 5000); // 5000 milliseconds = 5 seconds
-      });
+      document.addEventListener('scroll', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (window.scrollY > 300) {
+        scrollTopBtn.style.display = 'block';
+    } else {
+        scrollTopBtn.style.display = 'none';
+    }
+});
+
+document.getElementById('scrollTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+const animateImages = () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        const imgPosition = img.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
+        if (imgPosition < screenPosition) {
+            img.classList.add('animate');
+        } else {
+            img.classList.remove('animate');
+        }
+    });
+};
+
+window.addEventListener('scroll', animateImages);
+window.addEventListener('load', animateImages);
+
     </script>
-     -->
-    
   </body>
 </html>

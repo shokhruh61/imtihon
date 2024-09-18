@@ -56,12 +56,11 @@
     }
 
     .card {
-        max-width: 825px;
+        max-width: 825vh;
         background-image: none;
 
         .card__img img {
-            width: 700px;
-            margin-left: -20px;
+            margin-left: 40px;
         }
 
         padding: 50px;
@@ -572,7 +571,7 @@ flex-direction: column;
     .card__img {
         width: 576px;
         height: 276px;
-        margin-left: 120px;
+        margin-left: 50px;
     }
 
     // ICONS

@@ -353,6 +353,7 @@ flex-direction: column;
 
     // OBJECT
     .object {
+        width: 100%;
         background-color: #FF7235;
         background-attachment: local;
         text-align: center;
@@ -379,7 +380,7 @@ flex-direction: column;
         }
     }
     .layer{
-        margin-left: -60px;
+        flex-direction: column;
     }
 
     //FOOTER
@@ -528,7 +529,7 @@ flex-direction: column;
     .hero__container {
         flex-direction: column;
         text-align: center;
-        margin-left: 141px;
+        margin-left: 130px;
 
         .hero__info h1 {
             font-size: 30px;
@@ -571,7 +572,7 @@ flex-direction: column;
     .card__img {
         width: 576px;
         height: 276px;
-        margin-left: 40px;
+        margin-left: 120px;
     }
 
     // ICONS
@@ -1409,14 +1410,6 @@ flex-direction: column;
     }
 
     // OBJECT
-    .object {
-        background-color: #FF7235;
-        background-attachment: local;
-        text-align: center;
-        flex-direction: column;
-
-    }
-
     .object__container {
         display: none;
     }
@@ -1424,15 +1417,13 @@ flex-direction: column;
 
     // FOOTER
     .footer__container {
-        margin-bottom: 20px;
+        margin-bottom: 1px;
         margin-left: 200px;
         flex-direction: column;
         text-align: center;
 
         .footer__nav1 {
             margin-bottom: 60px;
-            display: none;
-
             a {
                 font-size: 15px;
                 line-height: 24px;
